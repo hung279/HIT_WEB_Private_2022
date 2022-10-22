@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            font-weight: bold;
+        }
+        .main {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #f1f1f1;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div>
+            <h2>Các lệnh git cơ bản</h2>
+            <p>
+                1. git config (Cấu hình git) <br>
+                - Thiết lập git cho cá nhân <br>
+                - Câu lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git config --global user.name="username"
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            git config --global user.email="email"
+                        </span>
+                    </li>
+                </ul>
+                - ví dụ để config cho user mới
+                <ul>
+                    <li>
+                        <span>
+                            git config --global user.name="hung279"
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            git config --global user.email="hungnher279@gmail.com"
+                        </span>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                2. git init <br>
+                - Khởi tạo một kho chứa (reponsitory) mới hoặc đã có <br>
+                - Câu lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git init
+                        </span>
+                    </li>
+                </ul>
+                - Sau khi chạy xong câu lệnh sẽ tạo file .git <br>
+            </p>
+            <p>
+                3. git add <br>
+                -  Lệnh này sẽ đề xuất những thay đổi (thêm vào chỉ mục Index). <br>
+                - Câu Lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git add ten_file <br>
+                        </span>
+                        <p>hoặc</p>
+                    </li>
+                    <li>
+                        <span>
+                            git add . <br>
+                        </span>
+                        (Lệnh này add tất cả các file đang thay đổi)
+                    </li>
+                </ul>
+            </p>
+            <p>
+                4. git commit <br>
+                - Sau lệnh git add, cần sử dụng câu lệnh Commit để đây thông tin thay đổi lên Local Respository <br>
+                - Câu lệnh:
+                <ul>
+                    <li>
+                        <span>
+                            git commit -m "Ghi chu commit"
+                        </span>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                5. git status <br>
+                - Kiểm tra xem trạng thái của Commit <br>
+                - Câu lệnh:
+                <ul>
+                    <li>
+                        <span>
+                            git status
+                        </span>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                6. git remote <br>
+                - add remote mới<br>
+                - Câu Lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git remote add [remote_url] 
+                        </span> 
+                    </li>
+                </ul>
+                - Kiểm tra xem đã kết nối reponsitory của mình đến máy chủ remote chưa
+                - Câu Lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git remote -v
+                        </span>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                7. git push <br>
+                - Nếu đã add và commit những thay đổi và muốn đẩy lên server remote <br>
+                - Câu Lệnh
+                <ul>
+                    <li>
+                        <span>
+                            git push origin [ten_nhanh]
+                        </span>
+                    </li>
+                </ul>
+                - vi du:
+                <ul>
+                    <li>
+                        <span>
+                            git push origin master
+                        </span>
+                    </li>
+                </ul>
+                - Lúc này toàn bộ đã đc đưa lên server remote ở nhánh master(nhánh mặc định khi tạo reponsitory) <br>
+            </p>
+        </div>
+        <div>
+            <h2>Quy trình làm việc project mới với github</h2>
+            <ul>
+                <li>Tạo mới reponsitory ở github</li>
+                <li>
+                    <span>
+                        git init
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git add .
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git commit -m "ghi chu commit"
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git remote add origin [remote url]
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git push origin [ten nhanh chinh] (thường là master)
+                    </span>
+                </li>
+            </ul>
+            <br>
+            <h2>Quy trình làm việc với project đã có với github</h2>
+            <ul>
+                <li>
+                    <span>
+                        git add . hoặc git add [ten_file_nao_do]
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git commit -m "ghi chu commit"
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        git push origin [ten nhanh chinh] (thường là master)
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
