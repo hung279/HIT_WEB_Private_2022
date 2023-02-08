@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #id1 {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <h1 id="test1">HTML DOM</h1>
+        <h1 class="classtest">Nội dụng của h1</h1>
+        <h1>Trap</h1>
+        <h1 id="id1" class="class1">Thương anh Cương</h1>
+
+        <input id="ip1" type="text" value="fgjfkgjfg">
+        <a href="abc.com">DOM</a>
+        
+        <script>
+            let h1 = document.getElementById('test1');
+            let h2 = document.getElementsByClassName('classtest')[0];
+            let h3 = document.getElementsByTagName('h1')[2];
+            let h4 = document.querySelectorAll(".class1");
+            // let h4 = document.querySelector(".class1");
+            h1.innerHTML="Cương ơi";
+            console.log({h1});
+            let ip = document.getElementById('ip1');
+            ip.value = "Thay đổi kết quả";
+            h1.style.background = "green";
+            h1.style.color = "red";
+            h1.style.fontSize="50px";
+            // console.log(h2);
+            // console.log(h3);
+            // console.log(h4);
+            let p = document.createElement('p');
+            // console.log(p);
+            // console.log({p});
+            let text = document.createTextNode('Nội dung');
+            p.appendChild(text);
+            console.log(text);
+            console.log(p);
+            document.querySelector("#content").appendChild(p);
+        </script>
+    </body>
+</html>
+
+
